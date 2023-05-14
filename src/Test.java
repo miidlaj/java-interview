@@ -1,9 +1,9 @@
+import com.sun.source.tree.Tree;
+
 import java.util.HashMap;
+import java.util.Hashtable;
 
 public class Test {
-
-    // a=2, A=1, b=2, B=1, c=2, C=1, d=2, D=1
-
     public static void find(String str) {
 
         HashMap<Character, Integer> map = new HashMap();
