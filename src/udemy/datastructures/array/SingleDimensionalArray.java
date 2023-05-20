@@ -44,5 +44,7 @@ public class SingleDimensionalArray {
         array.insert(9,10);
         array.display();
 
+        var firstElement = array.arr[10];
+        System.out.println(firstElement);
     }
 }
