@@ -4,8 +4,14 @@ import java.util.Arrays;
 
 public class SingleDimensionalArray {
 
-    int arr[] = null;
+    int arr[];
 
+    /**
+     * Creating an empty array using size.
+     * @TimeComplexity = O(1)
+     * @SpaceComplexitu = O(n)
+     * @param size
+     */
     public SingleDimensionalArray(int size) {
         arr = new int[size];
 
@@ -20,6 +26,10 @@ public class SingleDimensionalArray {
 
     /**
      * Inserting array
+     *
+     * @TimeComplexity = O(1)
+     * @SpaceComplexitu = O(1)
+     *
      * @param location
      * @param valueToBeInserted
      */
@@ -46,6 +56,9 @@ public class SingleDimensionalArray {
 
     /**
      * Traversing into every element in an array
+     *
+     * @TimeComplexity = O(n)
+     * @SpaceComplexitu = O(1)
      */
     public void traverse() {
 
@@ -58,6 +71,10 @@ public class SingleDimensionalArray {
 
     /**
      * We loop into every element and check until our target found.
+     *
+     * @TimeComplexity = O(n)
+     * @SpaceComplexitu = O(1)
+     *
      * @param value
      * @return
      */
@@ -71,6 +88,22 @@ public class SingleDimensionalArray {
 
         }
         return index;
+    }
+
+    /**
+     * We find the array value and make to integer min value.
+     *
+     * @TimeComplexity = O(1)
+     * @SpaceComplexitu = O(1)
+     *
+     * @param index
+     */
+    public void delete(int index) {
+        try {
+            arr[index] = Integer.MIN_VALUE;
+        } catch (IndexOutOfBoundsException e) {
+            System.out.println("Invalid index!");
+        }
     }
 
     public static void main(String[] args) {
@@ -95,6 +128,8 @@ public class SingleDimensionalArray {
 
         /**
          * Accessing array using index
+         * @TimeComplexity = O(1)
+         * @SpaceComplexitu = O(1)
          */
         var firstElement = array.arr[9];
         System.out.println(firstElement);
@@ -109,5 +144,9 @@ public class SingleDimensionalArray {
          */
         System.out.println(array.search(5));
 
+        /**
+         * Delete Value
+         */
+        array.delete(5);
     }
 }
