@@ -1,41 +1,46 @@
 package udemy.datastructures.array;
 
-import java.util.Arrays;
-
 public class TwoDimensionalArray {
+
+    int[][] arr;
+
+    /**
+     * Initializing the array using setting min integer value for every index
+     * We use contractor for this
+     * @param numberOfRows
+     * @param numberOfColumns
+     */
+
+    public TwoDimensionalArray(int numberOfRows, int numberOfColumns) {
+        this.arr = new int[numberOfRows][numberOfColumns];
+
+        for (int row = 0; row < arr.length; row++) {
+            for (int col = 0; col < arr.length; col++) {
+                arr[row][col] = Integer.MIN_VALUE;
+            }
+        }
+    }
+
+    /**
+     * Inserting value in the array
+     */
+
+    public void insertValueToTheArray(int row, int col, int value) {
+
+        try {
+            if (arr[row][col] == Integer.MIN_VALUE)
+                arr[row][col] = value;
+            else
+                System.out.println("Already inserted!");
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Invalid Index!");
+        }
+    }
 
     public static void main(String[] args) {
 
-        /**
-         * @Step 1: Declare
-         */
-
-        int[][] arr;
-
-        /**
-         * @Step 2: Instantiate
-         */
-        arr = new int[2][2];
-
-        /**
-         * @Step 3: Initialize
-         *
-         * This is going to take O(mn) time complexity
-         * where m is the number of rows and m is the number of columns
-         */
-        arr[0][0] = 1;
-        arr[0][1] = 2;
-        arr[1][0] = 3;
-        arr[1][1] = 4;
-
-        System.out.println(Arrays.deepToString(arr));
-
-        /**
-         * All together
-         */
-
-        String stringArray[][] = {{"a", "b"}, {"c", "d"}};
-        System.out.println(Arrays.deepToString(stringArray));
+        TwoDimensionalArray array = new TwoDimensionalArray(2,2);
+        array.insertValueToTheArray(0,0, 10);
+        array.insertValueToTheArray(0, 0, 20);
     }
-
 }
