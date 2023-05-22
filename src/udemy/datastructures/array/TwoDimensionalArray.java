@@ -1,5 +1,7 @@
 package udemy.datastructures.array;
 
+import java.util.Arrays;
+
 public class TwoDimensionalArray {
 
     int[][] arr;
@@ -41,6 +43,12 @@ public class TwoDimensionalArray {
 
         TwoDimensionalArray array = new TwoDimensionalArray(2,2);
         array.insertValueToTheArray(0,0, 10);
-        array.insertValueToTheArray(0, 0, 20);
+        array.insertValueToTheArray(1, 0, 20);
+
+        /**
+         * Using Arrays library we can print both 1D and 2D arrays
+         * We can use deepToString() method for printing multidimensional arrays
+         */
+        System.out.println(Arrays.deepToString(array.arr));
     }
 }
