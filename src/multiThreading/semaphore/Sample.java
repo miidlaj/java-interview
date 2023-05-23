@@ -4,7 +4,7 @@ import java.util.concurrent.Semaphore;
 
 class Task implements Runnable {
 
-    Semaphore semaphore = new Semaphore(1);
+    Semaphore semaphore = new Semaphore(2);
 
     @Override
     public void run() {
@@ -31,9 +31,12 @@ public class Sample {
         Task task = new Task();
         Thread t1 = new Thread(task);
         Thread t2 = new Thread(task);
+        Thread t3 = new Thread(task);
         t1.setName("Thread 1");
         t2.setName("Thread 2");
+        t2.setName("Thread 3");
         t1.start();
         t2.start();
+        t3.start();
     }
 }
