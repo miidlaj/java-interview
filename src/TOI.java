@@ -1,3 +1,9 @@
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
+
 public class TOI {
 
     public static boolean search(int[] arr, int target) {
@@ -19,7 +25,10 @@ public class TOI {
         } else {
             return search(arr, target, lowIdx, mid - 1);
         }
+
     }
+
+
 
 
     public static void main(String[] args) {
@@ -28,7 +37,8 @@ public class TOI {
 
         System.out.println(search(array, 1));
 
-        Test.find("jnjr");
+        Test.find("entry");
+
     }
 
 }

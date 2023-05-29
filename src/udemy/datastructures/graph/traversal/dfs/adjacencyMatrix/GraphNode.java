@@ -1,6 +1,4 @@
-package udemy.datastructures.graph.traversal.bfs.adjacencyList;
-
-import java.util.ArrayList;
+package udemy.datastructures.graph.traversal.dfs.adjacencyMatrix;
 
 public class GraphNode {
 
@@ -8,10 +6,9 @@ public class GraphNode {
     public int index;
     public boolean isVisited = false;
 
-    public ArrayList<GraphNode> neighbors = new ArrayList<>();
-
     public GraphNode(String name, int index) {
         this.name = name;
         this.index = index;
     }
+
 }

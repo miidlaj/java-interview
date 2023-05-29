@@ -1,4 +1,4 @@
-package udemy.datastructures.graph.traversal.bfs.adjacencyList;
+package udemy.datastructures.graph.traversal.dfs.adjacencyMatrix;
 
 import java.util.ArrayList;
 
@@ -10,7 +10,7 @@ public class Main {
         nodeList.add(new GraphNode("A", 0));
         nodeList.add(new GraphNode("B", 1));
         nodeList.add(new GraphNode("C", 2));
-        nodeList.add(new GraphNode("D", 3));
+        nodeList.add(new GraphNode("D" , 3));
         nodeList.add(new GraphNode("E", 4));
 
         Graph graph = new Graph(nodeList);
@@ -23,8 +23,7 @@ public class Main {
         graph.addUndirectedEdge(3,4);
 
         System.out.println(graph);
-
-        graph.bfs();
+        graph.dfs();
 
     }
 }

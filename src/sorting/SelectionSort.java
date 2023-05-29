@@ -21,6 +21,7 @@ public class SelectionSort {
         }
 
         return arr;
+
     }
 
     public static int[] testSelectionSort(int arr[]) {
@@ -42,5 +43,6 @@ public class SelectionSort {
     public static void main(String[] args) {
         int arr[] ={3,60,35,2,45,320,5};
         System.out.println(Arrays.toString(testSelectionSort(arr)));
+
     }
 }

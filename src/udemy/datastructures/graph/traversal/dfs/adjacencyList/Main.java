@@ -1,4 +1,4 @@
-package udemy.datastructures.graph.traversal.bfs.adjacencyList;
+package udemy.datastructures.graph.traversal.dfs.adjacencyList;
 
 import java.util.ArrayList;
 
@@ -24,7 +24,7 @@ public class Main {
 
         System.out.println(graph);
 
-        graph.bfs();
+        graph.dfs();
 
     }
 }
